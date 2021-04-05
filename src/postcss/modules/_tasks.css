@@ -1,0 +1,22 @@
+.tasks{
+    
+    background: inherit;
+
+    border: 1px solid blue;
+    width:100%;
+    
+
+
+    .taskitem{
+        background: inherit;
+        border: 1px solid gray;
+        color:red;
+        .taskitem-header{
+            display: flex;
+            border: 1px solid blue;
+            background: inherit;
+        }
+    }
+
+
+}

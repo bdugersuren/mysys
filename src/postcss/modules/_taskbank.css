@@ -1,0 +1,37 @@
+.taskbank{
+    display: flex;
+    background: #135135;
+    flex-direction: column;
+
+    .taskbank_header{
+        background:#123456;
+        display: flex;
+        height:50px;
+        flex-direction: row;
+
+
+    }
+
+    .taskbank_body{
+        display: flex;
+
+
+        .taskbank_leftside{
+            flex:3;
+            background:#999999;
+            border: 1px solid blue;
+        }
+
+        .taskbank_content{
+            flex:10;
+            background:#000000;
+            border: 1px solid blue;
+        }
+
+        .taskbank_rightside{
+            flex:1;
+            background:red;
+            border: 1px solid blue;
+        }
+    }
+}

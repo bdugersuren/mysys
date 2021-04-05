@@ -1,0 +1,17 @@
+.footers{
+    background: $tabmenu-line-color;
+    
+    border: 1px solid blue;
+    width:100%;
+
+
+    .about{
+        color:red;
+    }
+
+
+    .menu{
+        color:black;
+        background:inherit;
+    }
+}

@@ -1,0 +1,77 @@
+[
+
+	{
+        "id":"001",
+		"component": "QuizPage",
+		"path": "/quiz",
+		"title": "Тест",
+		"exact": true,
+        "role_id":"01",
+        "children":[
+            {
+                "id":"001-01",
+                "component": "TaskCreate",
+                "path": "/tms/task/",
+                "title": "Даалгавар үүсгэх",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            },
+            {
+                "id":"001-02",
+                "component": "TaskUpdate",
+                "path": "/tms/task/lst",
+                "title": "Даалгавар засах",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            },
+            {
+                "id":"001-03",
+                "component": "TaskDelete",
+                "path": "/tms/task/:id",
+                "title": "Даалгавар устгах",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            }
+        ]
+	},
+    {
+        "id":"002",
+		"component": "TaskBankPage",
+		"path": "/taskbank",
+		"title": "Даалгаврын сан",
+		"exact": true,
+        "role_id":"01",
+        "children":[
+            {
+                "id":"002-01",
+                "component": "QuizCreate",
+                "path": "/tms/quiz/",
+                "title": "Тест үүсгэх",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            },
+            {
+                "id":"002-02",
+                "component": "QuizUpdate",
+                "path": "/tms/quiz/lst",
+                "title": "Тест засах",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            },
+            {
+                "id":"002-03",
+                "component": "QuizDelete",
+                "path": "/tms/quiz/:id",
+                "title": "Тест устгах",
+                "exact": true,
+                "role_id":"01",
+                "children":[]
+            }
+        ]
+	}
+]
