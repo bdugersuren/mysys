@@ -9,10 +9,12 @@ import { PersistGate } from "redux-persist/integration/react";
 import AppRoute from "./layouts/AppRoute";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
+import PublicLayout from "./layouts/PublicLayout";
 
 //Pages
 import { store, persistor } from "./redux/store";
 import Page1 from "./tmp/Page1";
+import TreePage from "./tmp/TreePage";
 import Page2 from "./tmp/Page2";
 import QuizPage from "./pages/QuizPage";
 import TaskBankPage from "./pages/TaskBankPage";
@@ -25,12 +27,12 @@ const ProviderConfig = () => {
   return (
     <Router>
      
-      <AppRoute path="/quizs" layout={MainLayout} component={QuizPage} />
-      <AppRoute path="/tasks"  layout={MainLayout}  component={TaskBankPage} />
+      <AppRoute path="/quiz" layout={MainLayout} component={QuizPage} />
+      <AppRoute path="/taskbank"  layout={MainLayout}  component={TaskBankPage} />
       <AppRoute path="/admin"  layout={MainLayout}  component={Page2} />
       <AppRoute exact  path="/login"  layout={AuthLayout}  component={LoginPage} />
       <AppRoute exact  path="/register"  layout={AuthLayout}  component={RegisterPage} />
-      <Route exact path="/"  component={Page1} />
+      <AppRoute exact path="/" layout={PublicLayout} component={TreePage} />
     </Router>
   );
 };

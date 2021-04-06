@@ -1,4 +1,13 @@
 [
+    {
+        "id":"000",
+		"component": "TaskBankPage",
+		"path": "/",
+		"title": "Нүүр хуудас",
+		"exact": true,
+        "role_id":"01",
+        "children":[]
+	},
 
 	{
         "id":"001",
@@ -33,7 +42,33 @@
                 "title": "Даалгавар устгах",
                 "exact": true,
                 "role_id":"01",
-                "children":[]
+                "children":[{
+                    "id":"001-02-01",
+                    "component": "TaskUpdate",
+                    "path": "/tms/task/lst",
+                    "title": "Даалгавар засах",
+                    "exact": true,
+                    "role_id":"01",
+                    "children":[]
+                },
+                {
+                    "id":"001-03-02",
+                    "component": "TaskDelete",
+                    "path": "/tms/task/:id",
+                    "title": "Даалгавар устгах",
+                    "exact": true,
+                    "role_id":"01",
+                    "children":[{
+                        "id":"001-03-02-01",
+                        "component": "TaskDelete",
+                        "path": "/tms/task/:id",
+                        "title": "Даалгавар устгах",
+                        "exact": true,
+                        "role_id":"01",
+                        "children":[]
+                    }]
+                }
+            ]
             }
         ]
 	},
@@ -73,5 +108,32 @@
                 "children":[]
             }
         ]
+	},
+    {
+        "id":"003",
+		"component": "TaskBankPage",
+		"path": "/login",
+		"title": "Нэвтрэх",
+		"exact": true,
+        "role_id":"01",
+        "children":[]
+	},
+    {
+        "id":"004",
+		"component": "TaskBankPage",
+		"path": "/register",
+		"title": "Бүртгүүлэх",
+		"exact": true,
+        "role_id":"01",
+        "children":[]
+	},
+    {
+        "id":"005",
+		"component": "TaskBankPage",
+		"path": "/forget",
+		"title": "Нууц үгээ мартсан",
+		"exact": true,
+        "role_id":"01",
+        "children":[]
 	}
 ]

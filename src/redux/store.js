@@ -13,7 +13,7 @@ import rootReducer from './rootReducers';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
  
 export const store = createStore(
-    rootReducer, /* preloadedState, */ composeEnhancers(
+    rootReducer, composeEnhancers(
             applyMiddleware(thunk.withExtraArgument())
     )
 );

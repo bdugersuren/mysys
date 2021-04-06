@@ -1,13 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function MenuItem({menuItem}) {
+function MenuItem({childItem}) {
     return (
-        
-            <Link to={menuItem.path} >
-                {menuItem.title}
-            </Link>
-        
+        <ul>
+            {childItem.map(item=>{
+                return(
+                    <li key={item.id}>
+                        <Link to={item.path} >
+                            {item.title}
+                        </Link>
+                        {item.children!==null&&<MenuItem childItem={item.children}  />}
+                    </li>
+                )
+            })}
+           
+        </ul>  
     )
 }
 
