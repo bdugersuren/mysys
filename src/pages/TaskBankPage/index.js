@@ -9,16 +9,16 @@ function TaskBankPage() {
   return (
     <div className="taskbank">
       <div className="taskbank_header">
-      <div>Хичээл: </div>
-        <select>
+      <div className="garchig1">Хичээл: </div>
+        <select className="hicheel">
             {subjectTableData.map((item) => (
                 <option value={item.id}>{item.name}</option>
             
             ))}
             
         </select>
-        <div>Анги: </div>
-        <select>
+        <div className="garchig2">Анги: </div>
+        <select className="hicheel">
             {classTableData.map((item) => (
                 <option value={item.id}>{item.name}</option>
             

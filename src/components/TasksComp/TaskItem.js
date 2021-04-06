@@ -8,14 +8,16 @@ function TaskItem() {
     <div className="taskitem">
       <div className="taskitem-header">
         <input type="checkbox"></input>
-        <div>Question -1</div>
-        <div>1</div>
-        <img src={MyLogo}  onClick={()=>setIsQuestions(!isQuestions)}/>
-        <div onClick={()=>setIsAnswer(!isAnswer)}>&nbsp;&nbsp;&nbsp; ^ &nbsp;&nbsp;&nbsp;</div>
+        <div className="question">Question -1</div>
+        <div className="header-items">
+          {/* <div>1</div> */}
+          <img src={MyLogo}  onClick={()=>setIsQuestions(!isQuestions)}/>
+          <div onClick={()=>setIsAnswer(!isAnswer)}>&nbsp;&nbsp;&nbsp; ^ &nbsp;&nbsp;&nbsp;</div>
+        </div>
       </div>
 
       {isQuestions && (
-        <div>
+        <div className="task-body">
           <div className="taskitem-content">Энэ хэсэгт тухайт тестийн асуулт хэсэг байрлах юм</div>
           {isAnswer&&<div className="taskitem-answer">
               <div>
@@ -31,9 +33,8 @@ function TaskItem() {
                   Хариулт-4
               </div>
           </div>
-          }
-          
-        </div>
+          }     
+          </div> 
       )}
     </div>
   );
