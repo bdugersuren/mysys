@@ -25,6 +25,10 @@ import {
   BiArrowFromTop,
 } from "react-icons/bi";
 
+
+import { GrAddCircle, GrCheckmark, GrDown, GrEdit, GrTask } from "react-icons/gr";
+
+
 const nodes = [
   {
     value: "mars",
@@ -130,7 +134,6 @@ function TaskBankPage() {
   return (
     <div className="taskbank">
       <div className="taskbank_header">
-<<<<<<< HEAD
         <div>Анги: </div>
         <Select
           className="selectClass"
@@ -150,7 +153,6 @@ function TaskBankPage() {
         />
 
         <button>Сонгогдсон даалгавар 120</button>
-=======
       <div className="garchig1">Хичээл: </div>
         <select className="hicheel">
             {subjectTableData.map((item) => (
@@ -168,7 +170,6 @@ function TaskBankPage() {
             
         </select>
         <button>Сонгогдсондаалгавар 120</button>
->>>>>>> main
         <button>Сонгогдсон даалгавар 12</button>
       </div>
       <div className="taskbank_body">
@@ -200,7 +201,13 @@ function TaskBankPage() {
           <TasksComp />
           <PaginationComp />
         </div>
-        <div className="taskbank_rightside">fixed menu</div>
+        <div className="taskbank_rightside" >
+          
+          <BiBookReader />
+          <GrCheckmark />
+          <GrDown /> <GrEdit/> <GrTask />
+
+        </div>
       </div>
     </div>
   );
