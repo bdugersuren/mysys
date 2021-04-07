@@ -17,27 +17,42 @@
         select {
             margin-left: 1rem;
             margin-right: 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            border: 2px solid black;
         }
 
-        .buttn{
-            width: 9rem;
+        button{
+            width: 8rem;
             display: flex;
             margin-left: 1rem;
-            height: 3.5rem;
+            height: 2.5rem;
+            padding-left: 1rem;
             align-items:center;
             justify-content:center;
             background-color: $red;
             color: white;
             border: transparent;
             border-radius: 0.5rem;
+            outline:none;
             
             
             .side1{
                 flex:1;
+                word-wrap: break-word;
+                font-size: 0.6rem;
+                color: white;
             }
             .side2{
                 flex:1;
+                word-wrap: break-word;
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
             }
+        }
+        .button2{
+            background-color: $teal-light;
         }
         
     }

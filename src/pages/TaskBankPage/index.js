@@ -25,14 +25,8 @@ function TaskBankPage() {
             ))}
             
         </select>
-        <div className="buttn">
-          <div className="side1">Сонгогдсон даалгавар</div>
-          <div className="side2">120</div>
-        </div>
-        <div className="buttn">
-          <div className="side1">Сонгогдсон даалгавар</div>
-          <div className="side2">12</div>
-        </div>
+        <button>Сонгогдсондаалгавар 120</button>
+        <button>Сонгогдсон даалгавар 12</button>
       </div>
       <div className="taskbank_body">
         <div className="taskbank_leftside">Зүүн талын хэсэг</div>

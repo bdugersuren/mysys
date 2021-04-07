@@ -25,8 +25,14 @@ function QuizPage() {
             ))}
             
         </select>
-        <button>Сонгогдсон даалгавар 120</button>
-        <button>Сонгогдсон даалгавар 12</button>
+        <button className="button1">
+          <div className="side1">Сонгогдсон даалгавар</div>
+          <div className="side2">120</div>
+        </button>
+        <button className="button2">
+          <div className="side1">Сонгогдсон даалгавар</div>
+          <div className="side2">12</div>
+        </button>
       </div>
       <div className="taskbank_body">
         <div className="taskbank_leftside">
