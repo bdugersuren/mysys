@@ -25,17 +25,38 @@ function QuizPage() {
             ))}
             
         </select>
-        <button>Сонгогдсон даалгавар 120</button>
-        <button>Сонгогдсон даалгавар 12</button>
+        <button className="button1">
+          <div className="side1">Сонгогдсон даалгавар</div>
+          <div className="side2">120</div>
+        </button>
+        <button className="button2">
+          <div className="side1">Сонгогдсон даалгавар</div>
+          <div className="side2">12</div>
+        </button>
       </div>
       <div className="taskbank_body">
-        <div className="taskbank_leftside">Зүүн талын хэсэг</div>
+        <div className="taskbank_leftside">
+          <ul>
+            <li>
+              <p>lorem1</p>
+              <ul>
+                <li>lorem2</li>
+                <li>lorem2</li>
+                <li>lorem2</li>
+                <li>lorem2</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <div className="taskbank_content">
           <TasksComp />
           <PaginationComp />
         </div>
         <div className="taskbank_rightside">
-            fixed menu
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
         </div>
       </div>
     </div>

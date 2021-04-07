@@ -1,6 +1,7 @@
 .footers{
-    background: $tabmenu-line-color;
-    
+    background: $teal;
+    margin-top: 2rem;
+    padding: 1rem;
     border: 1px solid blue;
     width:100%;
 

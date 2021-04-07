@@ -20,4 +20,7 @@
 @import 'modules/_footer.css';
 @import 'modules/_tasks.css';
 @import 'modules/_taskbank.css';
+@import 'modules/_headercomp.css';
 @import 'modules/_loginPage.css';
+@import 'modules/_pagination.css';
+

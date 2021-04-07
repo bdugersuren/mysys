@@ -1,9 +1,35 @@
 
-/*---------- Үндсэн layout-ийн тохиргооны хувьсагчид ------------*/
-$mainBackground:#FFF;
-$mainBlue:#dd50c6;
+/* COLORS */
+$mainBackground: #FFF;
+$background-dark: #222f3e;
+$text-dark: #222f3e;
+$text-light: #fff;
 
-$mainText: #233;
+
+
+$teal-light: #00d2d3;
+$teal: #01a3a4;
+$pink-light: #ff9ff3;
+$pink: #ff9ff3;
+$yellow: #feca57;
+$orange: #ff9f43;
+$blue-light: #54a0ff;
+$blue: #2e86de;
+$red-light: #ff6b6b;
+$red: #ee5253;
+$purple-light: #5f27cd;
+$purple: #341f97;
+$cyan-light: #48dbfb;
+$cyan:#0abde3;
+$gray-lighter: #ecf0f1;
+$gray-light: #ececec;
+$gray: #8395a7;
+$green-light: #1dd1a1;
+$green: #10ac84;
+$gray-town: #576574;
+$gray-dark: #222f3e;
+
+
 
 /* ---------- tabmenu -ийн тохиргооны хувьсагчид ------------*/
 $tabmenu-bg-color: #786ff7f1;
@@ -16,3 +42,4 @@ $tab-bg-color: #f8f2f2;
 
 /* ---------- toolbar -ийн тохиргооны хувьсагчид ------------*/
 $toolbar-height: 95px;
+$MainColor: #01a3a4;

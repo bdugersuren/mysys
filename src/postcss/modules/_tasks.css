@@ -1,20 +1,57 @@
 .tasks{
     
-    background: inherit;
-
+    background-color: $gray-lighter;
     border: 1px solid blue;
     width:100%;
-    
-
 
     .taskitem{
         background: inherit;
         border: 1px solid gray;
         color:red;
+        
         .taskitem-header{
             display: flex;
-            border: 1px solid blue;
             background: inherit;
+            padding: 0.4rem;
+            align-items: center;
+
+            input {
+                flex: 1;
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            .question {
+                flex: 12;
+                font-size: 1rem;
+                font-weight: light; 
+            }
+
+            .header-items {
+                flex: 1;
+                display: flex;
+                cursor: pointer;
+                
+                img {
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .task-body {
+            .taskitem-content {
+                font-weight: bold;
+                
+                margin: 0rem 2rem;
+                border-bottom: 1px solid gray;
+            }
+
+            .taskitem-answer {
+                padding: 2rem;
+            }
+
         }
     }
 

@@ -1,0 +1,72 @@
+.mainTopHeader {    
+    background: inherit;
+    background: $teal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 1px solid blue;
+    width: 100%;
+    
+    .mainTopLogo {
+        background: inherit;
+        border: 1px solid gray;
+        color:red;
+        .h3 {
+            font-size: 20px;
+        }
+        
+    }
+    
+    .nav {
+        width: 100%;
+        background-color: $teal;
+        padding: 1rem;
+        display: flex;
+        align-items: center;    
+        
+        .logo {
+            flex: 3;
+            display: flex;
+            justify-content: center;
+
+            .temp_logo {
+                width: 2rem;
+                height: 2rem;
+                background-color: white;
+                border-radius: 100px;
+            }
+        }
+        
+        .menu {
+            
+            flex: 12;
+            display: flex;
+            
+            div {
+                color: white;
+                padding-left: 1rem;
+            }
+        }
+        
+        .user {
+            display: flex;
+            align-items: center;
+            flex: 3;
+
+            .temp_logo2 {
+                width: 2rem;
+                height: 2rem;
+                background-color: white;
+                border-radius: 100px;
+            }
+            
+            div {
+                margin-left: 1rem;
+                color: white;
+            }
+
+        }
+    }
+    
+}
+

@@ -1,30 +1,21 @@
+<<<<<<< HEAD
 *{
     background: $mainBackground;
     color: black;
+=======
+* {
+    /* background: $mainBackground; */
+    color: $text-dark;
+>>>>>>> main
     box-sizing: border-box;
-    font-family: 'Roboto Condensed',Roboto, 'Roboto Condensed',  Times, 'Times New Roman', serif;
-    
-}
-ul li  div svg{
+    font-family: 'Roboto', sans-serif;
+  }
+  ul li div svg {
     background: inherit;
-}
-
-
-
-.layout{
-    height: 100px;
-    width: 100px;
-}
-
-
-.my-test{
-    background: green;
-
-    .sec-2{
-        color:$mainBlue ;
-    }
-
-    .sec-1{
-        color:$mainText ;
-    }
-}
+  }
+  
+  .layout {
+    height: 100%;
+    width: 100%;
+  }
+  

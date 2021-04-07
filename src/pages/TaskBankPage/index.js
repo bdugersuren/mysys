@@ -130,6 +130,7 @@ function TaskBankPage() {
   return (
     <div className="taskbank">
       <div className="taskbank_header">
+<<<<<<< HEAD
         <div>Анги: </div>
         <Select
           className="selectClass"
@@ -149,6 +150,25 @@ function TaskBankPage() {
         />
 
         <button>Сонгогдсон даалгавар 120</button>
+=======
+      <div className="garchig1">Хичээл: </div>
+        <select className="hicheel">
+            {subjectTableData.map((item) => (
+                <option value={item.id}>{item.name}</option>
+            
+            ))}
+            
+        </select>
+        <div className="garchig2">Анги: </div>
+        <select className="hicheel">
+            {classTableData.map((item) => (
+                <option value={item.id}>{item.name}</option>
+            
+            ))}
+            
+        </select>
+        <button>Сонгогдсондаалгавар 120</button>
+>>>>>>> main
         <button>Сонгогдсон даалгавар 12</button>
       </div>
       <div className="taskbank_body">
