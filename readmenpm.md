@@ -4,6 +4,7 @@ npm i --save-dev @babel/core @babel/preset-env @babel/preset-react autoprefixer 
 
 npm i --save-dev postcss-import postcss-mixins postcss-simple-vars postcss-nested
 npm i --save react-redux-i18n react-redux redux redux-thunk redux-persist
+npm install react-checkbox-tree --save
 
 
 
@@ -11,6 +12,12 @@ npm i --save react-redux-i18n react-redux redux redux-thunk redux-persist
 
 -----------------------------Холбоосууд-----------------------------------
 https://phrase.com/blog/posts/react-redux-tutorial-internationalization-with-react-i18n-redux/
+https://jasonwatmore.com/post/2020/03/02/react-hooks-redux-user-registration-and-login-tutorial-example
+https://bezkoder.com/react-hooks-redux-login-registration-example/
+
+
+
+http://fauntleroy.github.io/react-simple-dropdown/#
 
 
 
@@ -21,3 +28,10 @@ npm install -g firebase-tools
 firebase login
 firebase init
 firebase deploy
+
+
+
+
+
+===================  Icons =====================
+http://react-icons.github.io/react-icons

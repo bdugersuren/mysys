@@ -4,7 +4,7 @@ import initialState from '../../demoData/topicData.json';
 const { LOAD_TOPIC_BEGIN, LOAD_TOPIC_SUCCESS, LOAD_TOPIC_ERR,FILTER_TOPIC_DATAS } = actions;
 
 const initialStateFilter = {
-  topics: initialState,
+  topics: [],
   loading: false,
   error: null,
 };
@@ -20,13 +20,13 @@ const topicTableReducer = (state = initialStateFilter, action) => {
     case LOAD_TOPIC_SUCCESS:
       return {
         ...state,
-        topics:data,
+        topics:[...data.data],
         loading: false,
       };
       case FILTER_TOPIC_DATAS:
         return {
           ...state,
-          topics: state.topics.filter(cls=>cls.class_id==data.class_id).filter(sid=>sid.subject_id==data.subject_id),
+          topics: (data.class_id&&data.subject_id)&&state.topics.filter(cls=>cls.class_id==data.class_id).filter(sid=>sid.subject_id==data.subject_id),
           loading: false,
         };
     case LOAD_TOPIC_ERR:

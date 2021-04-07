@@ -25,9 +25,11 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
 }));
 
 module.exports = {
-  entry: {
-    app: "./src/index.js",
-  },
+  entry: [
+    "./src/index.js",
+    'regenerator-runtime/runtime',
+    "font-awesome/scss/font-awesome.scss"
+  ],
   output: {
     filename: 'js/[name].[hash].js',
     path: environment.paths.output,
@@ -36,8 +38,10 @@ module.exports = {
     rules: [
       {
         test: /\.((c|sa|sc)ss)$/i,
-        use: [MiniCssExtractPlugin.loader, 
+        use: [
+          MiniCssExtractPlugin.loader, 
           'css-loader', 
+          
           'postcss-loader', 
           'sass-loader'],
       },
@@ -60,6 +64,13 @@ module.exports = {
         ],
       },
       {
+        test: /font-awesome\.config\.js/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'font-awesome-loader' }
+        ]
+      },
+      {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
@@ -68,6 +79,7 @@ module.exports = {
               name: 'fonts/[name].[hash:6].[ext]',
               publicPath: '../',
               limit: environment.limits.fonts,
+              outputPath: 'fonts/'
             },
           },
         ],

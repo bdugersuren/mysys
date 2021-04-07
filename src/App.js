@@ -1,9 +1,10 @@
-import React from "react";
+import React,{lazy} from "react";
 //import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { Provider, useSelector } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/store";
 
 //Layouts
 import AppRoute from "./layouts/AppRoute";
@@ -12,14 +13,14 @@ import AuthLayout from "./layouts/AuthLayout";
 import PublicLayout from "./layouts/PublicLayout";
 
 //Pages
-import { store, persistor } from "./redux/store";
-import Page1 from "./tmp/Page1";
-import TreePage from "./tmp/TreePage";
-import Page2 from "./tmp/Page2";
-import QuizPage from "./pages/QuizPage";
-import TaskBankPage from "./pages/TaskBankPage";
-import LoginPage from "./pages/auth/LoginPage";
-import RegisterPage from "./pages/auth/RegisterPage";
+
+const Page1 = lazy(() => import('./tmp/Page1'));
+const TreePage = lazy(() => import('./tmp/TreePage'));
+const Page2 = lazy(() => import('./tmp/Page2'));
+const QuizPage = lazy(() => import('./pages/QuizPage'));
+const TaskBankPage = lazy(() => import('./pages/TaskBankPage'));
+const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
+const RegisterPage = lazy(() => import('./pages/auth/RegisterPage'));
 
 
 
@@ -28,8 +29,9 @@ const ProviderConfig = () => {
     <Router>
      
       <AppRoute path="/quiz" layout={MainLayout} component={QuizPage} />
+      <AppRoute path="/page1" layout={MainLayout} component={Page1} />
       <AppRoute path="/taskbank"  layout={MainLayout}  component={TaskBankPage} />
-      <AppRoute path="/admin"  layout={MainLayout}  component={Page2} />
+      <AppRoute path="/admin"  layout={MainLayout}  component={Page1} />
       <AppRoute exact  path="/login"  layout={AuthLayout}  component={LoginPage} />
       <AppRoute exact  path="/register"  layout={AuthLayout}  component={RegisterPage} />
       <AppRoute exact path="/" layout={PublicLayout} component={TreePage} />

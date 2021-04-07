@@ -1,5 +1,5 @@
 import actions from "./actions";
-//import initialState from '../../demoData/subjectData.json';
+import initialState from '../../demoData/subjectData.json';
 import axios from "../../utility/axios";
 
 const { loadSubjectBegin, loadSubjectSuccess, loadSubjectErr } = actions;
@@ -9,10 +9,13 @@ const loadSubjectDatas = () => {
     try {
       dispatch(loadSubjectBegin());
 
-      await axios.get("category").then(({ data }) => {
+      await axios.get("subjects?limit=100").then(({ data }) => {
         return dispatch(loadSubjectSuccess(data));
       });
 
+
+      //dispatch(loadSubjectSuccess(initialState));
+    
     } catch (err) {
       dispatch(loadSubjectErr(err));
     }

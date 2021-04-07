@@ -1,10 +1,10 @@
 import actions from './actions';
-import initialState from '../../demoData/subjectData.json';
+//import initialState from '../../demoData/subjectData.json';
 
-const { LOAD_SUBJECT_BEGIN, LOAD_SUBJECTUCCESS, LOAD_SUBJECTSS_ERR } = actions;
+const { LOAD_SUBJECT_BEGIN, LOAD_SUBJECT_SUCCESS, LOAD_SUBJECTSS_ERR } = actions;
 
 const initialStateFilter = {
-  data: initialState,
+  data: [],
   loading: false,
   error: null,
 };
@@ -17,10 +17,11 @@ const subjectTableReducer = (state = initialStateFilter, action) => {
         ...state,
         loading: true,
       };
-    case LOAD_SUBJECTUCCESS:
+    case LOAD_SUBJECT_SUCCESS:
+      console.log("++++++++++++++++++++++++++++",data);
       return {
         ...state,
-        data:data,
+        data: [...data.data],
         loading: false,
       };
     case LOAD_SUBJECTSS_ERR:
